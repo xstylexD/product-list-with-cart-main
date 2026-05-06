@@ -1,0 +1,340 @@
+$Red: hsl(14, 86%, 42%);
+
+$background: rgba(0, 0, 0, 0.5);
+
+$Rose-50: hsl(20, 50%, 98%);
+$Rose-100: hsl(13, 31%, 94%);
+$Rose-300: hsl(14, 25%, 72%);
+$Rose-400: hsl(7, 20%, 60%);
+$Rose-500: hsl(12, 20%, 44%);
+$Rose-900: hsl(14, 65%, 9%);
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+     font-family: "Red Hat Text", sans-serif;
+    font-size: 16px;
+}
+
+ul, li {
+    list-style-type: none;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    display: block;
+}
+
+button:focus-visible {
+  outline: 2px solid $Red;
+}
+
+img {
+    display: block;
+}
+
+main {
+    background-color: $Rose-50;
+    margin: 0 auto;
+    position: relative;
+}
+
+.container {
+    padding: 20px;
+}
+
+@media screen and (min-width: 1440px) {
+    main {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        padding: 50px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+    
+}
+
+.title {
+    color: $Rose-900;
+}
+
+.products {
+    display: flex;  
+    flex-direction: column;
+  
+    &__item {
+        margin-top: 30px;
+    }
+
+    &__preview {
+        position: relative;
+        width: 100%;
+    }
+
+    &__img {
+        border-radius: 10px;
+        width: 100%;
+    }
+
+    &__add {
+         position: absolute;
+    left: 50%;
+    bottom: 0;
+
+    transform: translate(-50%, 50%);
+        min-width: 140px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        background-color: white;
+        border-radius: 50px;
+        border: 1px solid $Rose-900;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    &__controls {
+        background-color: $Red;
+        border-radius: 50px;
+        position: absolute;
+        padding: 10px 20px;
+        font-size: 14px;
+        font-weight: 500;
+        left: 50%;
+        bottom: 0;
+        color: white;
+        gap: 30px;
+        transform: translate(-50%, 50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 140px;
+
+        img {
+            border: 1px solid white;
+            border-radius: 100%;
+            padding: 3px;
+            width: 15px;
+            height: 15px;
+        }
+    }
+
+      &__controls-active {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__selected-img {
+        border: 3px solid $Red;
+    }
+
+    &__info {
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        gap: 3px;
+    }
+
+    &__category {
+        margin-top: 20px;
+        color: $Rose-300;
+        font-weight: 400;
+    }
+
+    &__name {
+        font-weight: 500;
+        color: $Rose-900;
+    }
+
+    &__price {
+        font-weight: 700;
+        color: $Red;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .products {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 10px;
+    }
+    
+}
+
+.cart {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+
+    &__order {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__total {
+        font-weight: 400;
+        color: $Rose-500;
+
+        &-price {
+            font-weight: 700;
+            color: $Rose-900;
+        }
+    }
+
+    &__delivery {
+        margin-top: 30px;
+        background-color: $Rose-100;
+        display: flex;
+        justify-content: space-around;
+        padding: 10px 20px;
+        border-radius: 10px;
+        color: $Rose-500;
+        font-weight: 400;
+
+        span {
+            color: $Rose-900;
+            font-weight: 500;
+        }
+    }
+
+    &__confirm {
+        margin-top: 20px;
+        background-color: $Red;
+        font-weight: 700;
+        padding: 15px 20px;
+        width: 100%;
+        color: white;
+        border: none;
+        border-radius: 30px;
+    }
+
+    &__empty-img {
+        margin-top: 20px;
+    }
+
+    &__empty-text {
+        margin-top: 20px;
+        color: $Rose-300;
+        text-align: center;
+    }
+}
+.purchase {
+    &__title {
+        font-weight: 700;
+        color: $Red;
+    }
+
+    &__item {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+
+        &::after {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background-color: $Rose-300;
+            margin-top: 15px;
+        }
+    }
+
+    &__item-info {
+        display: flex;
+        gap: 10px;
+    }
+    
+    &__item-quantity {
+        margin-right: 5px;
+        color: $Red;
+        font-weight: 500;
+    }
+
+    &__item-price {
+        color: $Rose-300;
+        font-weight: 400;
+    }
+
+    &__remove-img {
+        border: 1px solid $Rose-400;
+        border-radius: 100%; 
+        padding: 2px;
+
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translate(0%, -50%);
+    }
+
+    &__item-total {
+        color: $Rose-400;
+        font-weight: 700;
+    }
+}
+
+.order {
+    height: 100%;
+    width: 100%;
+    background-color: $background;
+    position: fixed;
+    z-index: 55;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    align-items: end;
+
+    &__wrapper {
+        border-radius: 10px;
+    padding: 30px;
+    background-color: white;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 500px;
+    }
+
+    
+    &__title {
+        color: $Rose-900;
+        font-weight: 700;
+        margin-top: 20px;
+    }
+
+    &__descr {
+        color: $Rose-300;
+    }
+
+    &__btn {
+        margin-top: 40px;
+    }
+}
+
+.hide {
+    display: none;
+}
