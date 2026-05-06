@@ -1,188 +1,214 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Product list with cart</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+    <title>Frontend Mentor | Product list with cart</title>
 
-</head>
-<body>
-<main>
-   <div class="container">
-    <h1 class="title">Desserts</h1>
-  <ul class="products">
-   
-    <li class="products__item">
-      <div class="products__preview">
-         <img src="/assets/images/image-waffle-mobile.jpg" alt="Waffle with berries" class="products__img">
-         <button class="products__add">
-          <img src="/assets/images/icon-add-to-cart.svg" class="products__cart">
-            Add to Cart
-         </button>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1 class="title">Desserts</h1>
+        <ul class="products">
+          <li class="products__item">
+            <div class="products__preview">
+              <img
+                src="/assets/images/image-waffle-mobile.jpg"
+                alt="Waffle with berries"
+                class="products__img"
+              />
+              <button class="products__add">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  class="products__cart"
+                />
+                Add to Cart
+              </button>
+            </div>
+            <div class="products__info">
+              <p class="products__category">Waffle</p>
+              <p class="products__name">Waffle with Berries</p>
+
+              <p class="products__price">$6.50</p>
+            </div>
+          </li>
+
+          <li class="products__item">
+            <div class="products__preview">
+              <img
+                src="/assets/images/image-waffle-mobile.jpg"
+                alt="Waffle with berries"
+                class="products__img"
+              />
+              <button class="products__add">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  class="products__cart"
+                />
+                Add to Cart
+              </button>
+            </div>
+            <div class="products__info">
+              <p class="products__category">Waffle</p>
+              <p class="products__name">Waffle with Berries</p>
+
+              <p class="products__price">$6.50</p>
+            </div>
+          </li>
+
+          <li class="products__item">
+            <div class="products__preview">
+              <img
+                src="/assets/images/image-waffle-mobile.jpg"
+                alt="Waffle with berries"
+                class="products__img products__selected-img"
+              />
+              <button class="products__add hide">
+                <img
+                  src="/assets/images/icon-add-to-cart.svg"
+                  class="products__cart"
+                />
+                Add to Cart
+              </button>
+
+              <div class="products__controls products__controls-active">
+                <button class="products__btn products__btn-decrement">
+                  <img
+                    src="/assets/images/icon-decrement-quantity.svg"
+                    alt=""
+                  />
+                </button>
+
+                <p class="products__selected-quantity">2</p>
+
+                <button class="products__btn products__btn-increment">
+                  <img
+                    src="/assets/images/icon-increment-quantity.svg"
+                    alt=""
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="products__info">
+              <p class="products__category">Waffle</p>
+              <p class="products__name">Waffle with Berries</p>
+
+              <p class="products__price">$6.50</p>
+            </div>
+          </li>
+        </ul>
       </div>
-       <div class="products__info">
-          <p class="products__category">
-            Waffle
-          </p>
-          <p class="products__name">
-               Waffle with Berries
-          </p>
+      <div class="container">
+        <div class="cart hide">
+          <h2 class="cart__title">Your Cart <span>(0)</span></h2>
+          <div class="purchase__wrapper">
+            <div class="purchase__item">
+              <h4 class="purchase__name">Classic Tiramisu</h4>
+              <div class="purchase__item-info">
+                <div class="purchase__item-quantity">1x</div>
+                <div class="purchase__item-price">$5.50</div>
+                <div class="purchase__item-total">$5.50</div>
+              </div>
 
-          <p class="products__price">
-              $6.50
-          </p>
-         </div>
-    </li>
+              <button class="purchase__remove">
+                <img
+                  src="/assets/images/icon-remove-item.svg"
+                  alt="remove"
+                  class="purchase__remove-img"
+                />
+              </button>
+            </div>
+          </div>
 
-    <li class="products__item">
-      <div class="products__preview">
-         <img src="/assets/images/image-waffle-mobile.jpg" alt="Waffle with berries" class="products__img">
-         <button class="products__add">
-          <img src="/assets/images/icon-add-to-cart.svg" class="products__cart">
-            Add to Cart
-         </button>
-      </div>
-       <div class="products__info">
-          <p class="products__category">
-            Waffle
-          </p>
-          <p class="products__name">
-               Waffle with Berries
-          </p>
+          <div class="cart__order">
+            <p class="cart__total">Order Total</p>
+            <div class="cart__total-price">$46.50</div>
+          </div>
 
-          <p class="products__price">
-              $6.50
-          </p>
-         </div>
-    </li>
+          <div class="cart__delivery">
+            <img
+              src="/assets/images/icon-carbon-neutral.svg"
+              alt="carbon neutral"
+              class="cart__carbon"
+            />
+            <p class="cart_delivery-text">
+              This is a <span>carbon-neutral</span> delivery
+            </p>
+          </div>
 
-    <li class="products__item">
-      <div class="products__preview">
-         <img src="/assets/images/image-waffle-mobile.jpg" alt="Waffle with berries" class="products__img products__selected-img">
-         <button class="products__add hide">
-          <img src="/assets/images/icon-add-to-cart.svg" class="products__cart">
-            Add to Cart
-         </button>
-
-         <div class="products__controls products__controls-active">
-          <button  class="products__btn products__btn-decrement"><img src="/assets/images/icon-decrement-quantity.svg" alt=""></button>
-
-          <p class="products__selected-quantity">
-            2
-          </p>
-
-           <button class="products__btn products__btn-increment"><img src="/assets/images/icon-increment-quantity.svg" alt="" ></button>
-         </div>
-      </div>
-       <div class="products__info">
-          <p class="products__category">
-            Waffle
-          </p>
-          <p class="products__name">
-               Waffle with Berries
-          </p>
-
-          <p class="products__price">
-              $6.50
-          </p>
-         </div>
-    </li>
-  </ul>
-
-   </div>
-  <div class="container">
-    <div class="cart hide">
-    <h2 class="cart__title">Your Cart <span>(7)</span></h2>
-   
-      <div class="purchase__item">
-        <h4 class="purchase__name">Classic Tiramisu</h4>
-        <div class="purchase__item-info">
-          <div class="purchase__item-quantity">1x</div>
-          <div class="purchase__item-price">$5.50</div>
-          <div class="purchase__item-total">$5.50</div>
+          <button class="cart__confirm">Confirm Order</button>
         </div>
 
-        <button class="purchase__remove">
-          <img src="/assets/images/icon-remove-item.svg" alt="remove" class="purchase__remove-img">
-        </button>
-    </div>
+        <div class="cart cart__empty">
+          <h2 class="cart__title">Your Cart <span>(0)</span></h2>
 
-    <div class="cart__order">
-      <p class="cart__total">Order Total</p>
-      <div class="cart__total-price">$46.50</div>
-    </div>
+          <img
+            src="/assets/images/illustration-empty-cart.svg"
+            alt="Cart empty"
+            class="cart__empty-img"
+          />
 
-    <div class="cart__delivery">
-      <img src="/assets/images/icon-carbon-neutral.svg" alt="carbon neutral" class="cart__carbon">
-      <p class="cart_delivery-text">
-        This is a <span>carbon-neutral</span> delivery
-      </p>
-    </div>
-
-    <button class="cart__confirm">Confirm Order</button>
-</div>
-
-<div class="cart cart__empty">
-      <h2 class="cart__title">Your Cart <span>(0)</span></h2>
-
-      <img src="/assets/images/illustration-empty-cart.svg" alt="Cart empty" class="cart__empty-img">
-
-      <p class="cart__empty-text">
-        Your added items will appear here
-      </p>
-</div>
-
-  </div>
-<div class="order hide">
-
-  <div class="order__wrapper">
-  <img src="/assets/images/icon-order-confirmed.svg" alt="Order Confirmed" class="order__img">
-
-    <h2 class="order__title">
-      Order Confirmed
-    </h2>
-
-    <p class="order__descr">
-      We hope you enjoy your food!
-    </p>
-
-  <div class="order__cart">
-        <div class="purchase__item">
-      <h4 class="purchase__name">Classic Tiramisu</h4>
-      <div class="purchase__item-info">
-        <div class="purchase__item-quantity">1x</div>
-        <div class="purchase__item-price">$5.50</div>
-        <div class="purchase__item-total">$5.50</div>
+          <p class="cart__empty-text">Your added items will appear here</p>
+        </div>
       </div>
+      <div class="order hide">
+        <div class="order__wrapper">
+          <img
+            src="/assets/images/icon-order-confirmed.svg"
+            alt="Order Confirmed"
+            class="order__img"
+          />
 
-      <div class="purchase__remove">
-        <img src="/assets/images/icon-remove-item.svg" alt="remove" class="purchase__remove-img">
+          <h2 class="order__title">Order Confirmed</h2>
+
+          <p class="order__descr">We hope you enjoy your food!</p>
+
+          <div class="order__cart">
+            <div class="purchase__item">
+              <h4 class="purchase__name">Classic Tiramisu</h4>
+              <div class="purchase__item-info">
+                <div class="purchase__item-quantity">1x</div>
+                <div class="purchase__item-price">$5.50</div>
+                <div class="purchase__item-total">$5.50</div>
+              </div>
+
+              <div class="purchase__remove">
+                <img
+                  src="/assets/images/icon-remove-item.svg"
+                  alt="remove"
+                  class="purchase__remove-img"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="cart__order">
+            <p class="cart__total">Order Total</p>
+            <div class="cart__total-price">$46.50</div>
+          </div>
+
+          <button class="cart__confirm order__btn">Start New Order</button>
+        </div>
       </div>
-    </div>
-  </div>
+    </main>
 
-    <div class="cart__order">
-      <p class="cart__total">Order Total</p>
-      <div class="cart__total-price">$46.50</div>
-    </div>
-
-    <button class="cart__confirm order__btn">Start New Order</button>
-  </div>
-  
-</div>
-</main>
-
-
-  
-
-  <!-- Vanilla Bean Crème Brûlée
+    <!-- Vanilla Bean Crème Brûlée
   Crème Brûlée
   7.00
   Add to Cart
@@ -222,14 +248,12 @@
   6.50
   Add to Cart --->
 
+    <footer class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </footer>
 
-
-
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-
-  <script type="module" src="/main.js"></script>
-</body>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
